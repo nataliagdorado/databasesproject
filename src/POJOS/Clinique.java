@@ -4,6 +4,7 @@ import java.util.Objects;
 import java.util.TreeSet;
 
 public class Clinique implements Serializable{
+	
 	private Integer cliniqueId;
 	private String cliniquePassword;
 	private String cliniqueUsername;

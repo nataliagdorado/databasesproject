@@ -3,8 +3,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 public class MaintainanceRecord implements Serializable{
-	 //TODO ¿idPieza? Pieza ya tiene las maintainance dates; Pieza tendra que tener el Id de su maintainance
-    //TODO ¿Actual State?
+	
     private Integer maintainanceId;
     private LocalDate maintainanceDate;
     private String description;

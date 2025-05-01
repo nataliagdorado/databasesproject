@@ -8,7 +8,7 @@ import Enums.AccessoryType;
 
 public class Piece implements Serializable{
 	private Integer accesoryId;
-    private LocalDate last_Maintainance_Date;
+	private MaintainanceRecord lastMaintainance;//to know the date of the last Maintainance, look at the attributes of the last Maintanance record.
     private LocalDate next_Maintainance_Date;
     private String material;
     private AccessoryType accesoryType;
@@ -16,17 +16,29 @@ public class Piece implements Serializable{
     private Byte[] piecePhoto;
     private TreeSet<Machine> machines;
 
-    public Piece(Integer accesoryId, LocalDate last_Maintainance_Date, LocalDate next_Maintainance_Date, String material, AccessoryType accesoryType, Integer lifeSpan) {
+    public Piece(Integer accesoryId, MaintainanceRecord lastMaintainance, LocalDate next_Maintainance_Date, String material, AccessoryType accesoryType, Integer lifeSpan) {
         this.accesoryId = accesoryId;
-        this.last_Maintainance_Date = last_Maintainance_Date;
+        this.lastMaintainance=lastMaintainance;
         this.next_Maintainance_Date = next_Maintainance_Date;
         this.material = material;
         this.accesoryType = accesoryType;
         this.lifeSpan = lifeSpan;
         this.machines=new TreeSet<Machine>();
     }
+   
 
-    public AccessoryType getAccesoryType() {
+    public MaintainanceRecord getLastMaintainance() {
+		return lastMaintainance;
+	}
+
+
+	public void setLastMaintainance(MaintainanceRecord lastMaintainance) {
+		this.lastMaintainance = lastMaintainance;
+	}
+
+
+
+	public AccessoryType getAccesoryType() {
         return accesoryType;
     }
 
@@ -48,15 +60,6 @@ public class Piece implements Serializable{
 
     public void setAccesoryId(Integer accesoryId) {
         this.accesoryId = accesoryId;
-    }
-
-
-    public LocalDate getLast_Maintainance_Date() {
-        return last_Maintainance_Date;
-    }
-
-    public void setLast_Maintainance_Date(LocalDate last_Maintainance_Date) {
-        this.last_Maintainance_Date = last_Maintainance_Date;
     }
 
     public LocalDate getNext_Maintainance_Date() {

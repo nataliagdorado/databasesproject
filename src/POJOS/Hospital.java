@@ -4,6 +4,7 @@ import java.util.Objects;
 import java.util.TreeSet;
 
 public class Hospital implements Serializable{
+	
 	private Integer hospitalId;
 	private String hospitalUsername;
 	private String hospitalPassword;

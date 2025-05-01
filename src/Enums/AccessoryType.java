@@ -1,6 +1,7 @@
 package Enums;
 
 public enum AccessoryType {
+	
    BATTERY, CONNECTORS, MONITOR, POWERSUPPLY, BULB, SENSORS, TRANSDUCTORES, FILTERS  
    
    //Battery: portable defibrillators, vital signs monitors, or portable infusion pumps to keep them operational without a network connection.
