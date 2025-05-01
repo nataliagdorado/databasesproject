@@ -4,6 +4,7 @@ import java.util.Objects;
 import java.util.TreeSet;
 
 public class Provider implements Serializable{
+	
 	private Integer providerInt;
     private String providerPassword;
     private String providerUsername;

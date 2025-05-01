@@ -8,6 +8,7 @@ public class MaintainanceRecord implements Serializable{
     private Integer maintainanceId;
     private LocalDate maintainanceDate;
     private String description;
+  
 
     public MaintainanceRecord(Integer maintainanceId, LocalDate maintainanceDate, String description) {
         this.maintainanceId = maintainanceId;
